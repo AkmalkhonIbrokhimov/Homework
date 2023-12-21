@@ -1,12 +1,12 @@
-package LessonEleven.Task2;
+package LessonEleven.Task2.Iterface;
 
-public class Triangle extends Shape{
-    public Triangle(double a, double b,double c){
-        super(a,b,c);
+public class Triangle extends ConstructorShape implements Shape  {
+    public Triangle(double a, double b, double c) {
+        super(a, b, c);
     }
 
     @Override
-    public double getPerimtr() {
+    public double getPerimetr() {
         return getA()+getB()+getC();
     }
 
@@ -15,5 +15,4 @@ public class Triangle extends Shape{
         double perimetr = getA()+getB()+getC();
         return Math.sqrt(perimetr*(perimetr-getA())*(perimetr-getB())*(perimetr-getC()));
     }
-
 }

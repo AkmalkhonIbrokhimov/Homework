@@ -1,25 +1,23 @@
-package LessonEleven.Task2;
+package LessonEleven.Task2.Iterface;
 
-public  abstract class Shape {
-    private double a;
+public abstract class ConstructorShape {
+    private  double a;
     private  double b;
     private  double c;
     private  double radius;
-    public Shape(double radius){
+    public  ConstructorShape(double radius){
         this.radius=radius;
-    };
-    public Shape(double a, double b){
+    }
+    public ConstructorShape(double a, double b){
         this.a = a;
         this.b = b;
     }
-    public Shape(double a, double b,double c){
+    public ConstructorShape(double a, double b,double c){
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    public abstract double getPerimtr();
-    public abstract double getArea();
 
     public double getA() {
         return a;

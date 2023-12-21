@@ -1,4 +1,4 @@
-package LessonEleven.Task2;
+package LessonEleven.Task2.Abstract;
 
 public class MainTask2 {
     public static void main(String[] args) {

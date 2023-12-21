@@ -4,7 +4,13 @@ import LessonEleven.Task1.AClass;
 
 public class BClass extends AClass {
 
-public void showInfo(){
-    System.out.println(getVariable());
-}
+    @Override
+    public int getVariable() {
+        return super.getVariable();
+    }
+
+    @Override
+    public void setVariable(int variable) {
+        super.setVariable(variable);
+    }
 }

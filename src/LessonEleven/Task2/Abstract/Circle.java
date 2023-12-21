@@ -1,4 +1,4 @@
-package LessonEleven.Task2;
+package LessonEleven.Task2.Abstract;
 
 public class Circle extends Shape {
 

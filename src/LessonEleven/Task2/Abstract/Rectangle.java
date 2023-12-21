@@ -1,6 +1,6 @@
-package LessonEleven.Task2;
+package LessonEleven.Task2.Abstract;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
 
     public Rectangle(double a, double b){
         super(a, b);
