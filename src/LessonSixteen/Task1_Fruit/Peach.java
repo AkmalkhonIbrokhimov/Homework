@@ -1,4 +1,4 @@
-package LessonSixteen.Task1;
+package LessonSixteen.Task1_Fruit;
 
 public class Peach extends Fruits{
     public Peach(String name, String color, int weight) {

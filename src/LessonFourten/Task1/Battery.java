@@ -1,4 +1,4 @@
-package LessonThirteen.Task1;
+package LessonFourten.Task1;
 
 public class Battery {
     private  double capacity;

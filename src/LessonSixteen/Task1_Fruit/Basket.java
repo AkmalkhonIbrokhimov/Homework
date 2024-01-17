@@ -1,4 +1,4 @@
-package LessonSixteen.Task1;
+package LessonSixteen.Task1_Fruit;
 
 import java.util.Arrays;
 
@@ -24,8 +24,8 @@ public class Basket {
         this.counterWeight = counterWeight;
     }
 
-    public Fruits[] getFruits() {
-        return fruits;
+    public String getFruits() {
+        return Arrays.toString(fruits);
     }
 
     public boolean isEpty() {
@@ -57,6 +57,7 @@ public class Basket {
         int weightSum = 0;
         for (Fruits fruit : outputFruits) {
             weightSum += fruit.getWeight();
+            }
             if (getEmptySize() >= weightSum) {
                 Fruits[] newFruits = new Fruits[fruits.length + outputFruits.length];
                 int indeex = 0;
@@ -65,33 +66,29 @@ public class Basket {
                 }
                 for (Fruits f : outputFruits) {
                     newFruits[indeex++] = f;
+                    }
+
                     this.fruits = newFruits;
                     setCounterWeight(weightSum);
                     return true;
                 }
+            return false;
             }
-        }
-        return false;
-    }
+
+
+
 
     public int getEmptySize() {
         return (getMaxWeight() - getCounterWeight());
     }
 
     public final void showInfo() {
-        System.out.println(isEpty());
-        System.out.println(isFuul());
-        System.out.println(getEmptySize());
-        System.out.println(getFruits());
+        System.out.println("Savat boshmi :"+isEpty());
+        System.out.println("Savat tolami :"+isFuul());
+        System.out.println("Sizda "+getEmptySize()+" bo'sh joy mavjud");
+        System.out.println("Savatdagi mevalar royhati:" + getFruits());
 
     }
 
-    @Override
-    public String toString() {
-        return "Basket{" +
-                "maxWeight=" + maxWeight +
-                ", counterWeight=" + counterWeight +
-                ", fruits=" + Arrays.toString(fruits) +
-                '}';
-    }
+
 }

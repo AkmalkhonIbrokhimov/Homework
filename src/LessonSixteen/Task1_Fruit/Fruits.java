@@ -1,4 +1,4 @@
-package LessonSixteen.Task1;
+package LessonSixteen.Task1_Fruit;
 
 public abstract class Fruits {
     private final String name;

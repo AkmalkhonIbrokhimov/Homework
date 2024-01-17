@@ -1,5 +1,4 @@
-/*
-package LessonThirteen.Task1;
+package LessonFourten.Task1;
 
 public class Car {
     private Battery[] slot = new Battery[]{};
@@ -16,4 +15,3 @@ public class Car {
     }
 }
 
-*/

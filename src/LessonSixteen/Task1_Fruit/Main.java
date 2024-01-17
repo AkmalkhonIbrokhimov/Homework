@@ -1,6 +1,4 @@
-package LessonSixteen.Task1;
-
-import LessonEight.Task2.Fruit;
+package LessonSixteen.Task1_Fruit;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +8,7 @@ public class Main {
         Fruits [] fruits = {apples, peach, pomegranate};
 
         Basket basket = new Basket(1000);
+
         System.out.println(basket.addFruit(apples));
         System.out.println(basket.addFruits(fruits));
         basket.showInfo();
