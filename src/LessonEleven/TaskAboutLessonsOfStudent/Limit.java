@@ -3,7 +3,7 @@ package LessonEleven.TaskAboutLessonsOfStudent;
 public abstract class Limit {
     int limitTime;
 
-    public Limit(int LimitTime) {
+    public Limit(int limitTime) {
         this.limitTime = limitTime;
     }
 

@@ -12,40 +12,44 @@ public class Student extends Limit {
     }
 
     boolean addLesson(Lesson lesson){
-
-        if(limitTime>=lesson.getTimeOFWeek()){
+        if(limitTime >= lesson.getTimeOFWeek()){
             Lesson[] newLesson = new Lesson[lessons.length+1];
             int index=0;
             for (int i = 0; i < lessons.length; i++) {
-                newLesson[index]=lessons[i];
+                newLesson[index++]=lessons[i];
             }
             newLesson[index]=lesson;
+            lessons=newLesson;
             setLimitTime(limitTime-lesson.getTimeOFWeek());
 
             return true;
         }else{
-            System.out.println(" You do not have enough time becose you don't add new lesson. You need " + (lesson.getTimeOFWeek()-limitTime)+" free time");
+            System.out.println(" You do not have enough time because you don't add new lesson. You need " + (lesson.getTimeOFWeek()-limitTime)+" free time");
         }
         return false;
     }
-    public void sshowInfo(){
+    public void showInfo(){
         System.out.println("Student name "+name);
         System.out.println("The student is " +age+ " years old" );
-        for (Lesson lesson:lessons) {
-            System.out.println("He's enrolled in"+lesson);
+        System.out.println(lessons);
+        for (Lesson les:lessons) {
+           int  i=1;
+            System.out.println(i+"."+"He has signed up for the mobilepro course - "+les.getLessonName());
+            i++;
         }
         System.out.println("he has free time  "+limitTime+" hour on a weekly");
 
     }
 
-    boolean  isFullLesson(Lesson lesson){
+    boolean  isFullLesson(){
         return limitTime==0;
     }
     void getLesson(){
-        int lessonNumber=0;
-        for (Lesson lesson: lessons ) {
-            lessonNumber++;
-            System.out.println( lessonNumber+ "."+lesson.getLessonName());
+
+        for (Lesson les: lessons ) {
+            int lessonNumber=1;
+            System.out.println( lessonNumber+ "." + les.getLessonName());
+             lessonNumber++;
         }
     }
 
