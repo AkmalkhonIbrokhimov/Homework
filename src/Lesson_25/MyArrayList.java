@@ -9,7 +9,7 @@ public class MyArrayList<E>{
     private static final int defoltCapasity = 10;
     private int size;
 
-    MyArrayList(){
+    public MyArrayList(){
         this.myArrayList = new Object[defoltCapasity];
     }
 
@@ -183,12 +183,12 @@ public class MyArrayList<E>{
         }
     }
 
-/*    public boolean removeAll(Collection<?extends E> c){
-        if(cotainsAll(c)){
-            Object[] newObj = new Object[myArrayList.length - c.size()];
+   /* public boolean removeAll(E[] elements){
+        if(cotainsAll(elements)){
+            Object[] newObj = new Object[myArrayList.length - elements.length];
             int index=0;
             for (int i = 0; i < myArrayList.length; i++) {
-                if (myArrayList[i] == c[index++]) {
+                if (myArrayList[i] == elements[index++]) {
                     continue;
                 } else {
                     newObj[index++] = myArrayList[i];

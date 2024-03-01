@@ -10,6 +10,7 @@ import java.util.List;
 public class KingBurgersDB {
     private static KingBurgersDB instanke = null;
     private List<BaseProduct> productList = new ArrayList<>();
+    private List<ProductPrice> productPrices = new ArrayList<>();
     private KingBurgersDB(){
         productList.add(new Meet(ProductType.MEET,8000,10));
         productList.add(new Bread(ProductType.BREAD,2000,10));
@@ -23,6 +24,19 @@ public class KingBurgersDB {
         productList.add((new Ingredient(IngredientsType.MUSTARD,500,10)));
         productList.add((new Ingredient(IngredientsType.MAYONNAISE,400,10)));
 
+    }
+    public  void collectPrice(List<BaseProduct> products){
+        for (BaseProduct product : products) {
+            if(product.getProductType() != null){
+                productPrices.add(new ProductPrice(product.getProductType().name(),product.getPrice()));
+            }
+            if(product.getIngredientsType() != null){
+                productPrices.add(new ProductPrice(product.getIngredientsType().name(),product.getPrice()));
+            }
+        }
+    }
+    public List<ProductPrice> getProductPrices() {
+        return productPrices;
     }
 
     public void setProductList(List<BaseProduct> products) {
@@ -57,5 +71,13 @@ public class KingBurgersDB {
             instanke = new KingBurgersDB();
         }
         return instanke;
+    }
+
+    @Override
+    public String toString() {
+        return "KingBurgersDB{" +
+                "productList=" + productList +
+                ", productPrices=" + productPrices +
+                '}';
     }
 }

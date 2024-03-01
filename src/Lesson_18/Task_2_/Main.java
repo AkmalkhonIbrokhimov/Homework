@@ -4,6 +4,14 @@ import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
+
+        Message message = new Message() {
+            @Override
+            public void showInfo(String message) {
+
+            }
+        };
+
         Students student = new Students("Akmalxon","Ibroximov",22,"Footballer");
         LinkedList<Students> students = new LinkedList<>();
         students.add(new Students("Mardon","Jumonov",23));
@@ -11,16 +19,11 @@ public class Main {
         students.add(new Students("Dostonjon","Maxmudov",22,"Tennisit"));
         students.add(new Students("Rasulxon","Olimjonov",22,"Tennisit"));
         students.add(new Students("Xusniddin","Baxriddinow",22,"Footballer","Tennisit"));
-
         Grouup grouup = new Grouup();
-        grouup.setMessage(new Message() {
-            @Override
-            public Message showInfo(String message) {
-                return null;
-            }
-        });
 
-        grouup.addStudent(student);
+
+
+                grouup.addStudent(student);
         System.out.println(grouup);
         System.out.println("________________________________________________________________________________________");
         System.out.println('\n');

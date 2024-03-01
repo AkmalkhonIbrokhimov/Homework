@@ -1,6 +1,7 @@
 package Lesson_19;
 
 import Lesson_19.DB.KingBurgersDB;
+import Lesson_19.DB.ProductPrice;
 import Lesson_19.Product.*;
 import Lesson_19.Product_Type.IngredientsType;
 import Lesson_19.Product_Type.ProductType;
@@ -29,11 +30,10 @@ public class Main {
         productList.add((new Ingredient(IngredientsType.LETTUCE,500,8)));
         productList.add((new Ingredient(IngredientsType.TOMATO,500,8)));
 
-        kingBurgersDB.setProductList(productList);
-
 
         Scanner scanner = new Scanner(System.in);
-
+kingBurgersDB.getProductPrices();
+        System.out.println(kingBurgersDB.getProductPrices());
 
         boolean isChooseHamburger = true;
         boolean isChooseHamburgerAgain = false;
@@ -115,10 +115,13 @@ public class Main {
                     userChoseIngredient.clear();
                     System.out.println(userChoseBurgers);
 
+
                 }
             }
         }
     }
+
+
 
     private static void  choseSimpleBurger(Scanner scanner,KingBurgersDB kingBurgersDB, int counterBurger) {
         boolean isChooseIngredient = true;
@@ -152,12 +155,19 @@ public class Main {
                     userChoseBurgers.add(simpleBurger);
                     userChoseIngredient.clear();
                     System.out.println(userChoseBurgers);
+                    calcuateCosts(kingBurgersDB.getProductPrices());
 
                 }
             }
         }
 
 
+    }
+
+    private static void calcuateCosts(List<ProductPrice> productPrices) {
+        for (Hamburger userChoseBurger : userChoseBurgers) {
+            System.out.println(HelperForCalculate.calcuateCost(productPrices, userChoseBurger));
+        }
     }
 
     private static void getSumm() {

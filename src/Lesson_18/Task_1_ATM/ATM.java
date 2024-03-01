@@ -6,13 +6,10 @@ import java.util.LinkedList;
 public class ATM {
     private MessageInterface messageInterface = null;
     private ShowMoneyInterface showMoneyInterface = null;
-<<<<<<< HEAD
     private LinkedList<Integer> monies = new LinkedList<>();
     private MoneyType[] moneyType1 = MoneyType.values();
-=======
-    LinkedList<Integer> monies = new LinkedList<>();
-    MoneyType[] moneyType1 = MoneyType.values();
->>>>>>> origin/master
+
+
     private int  amoutMoney;
 
 

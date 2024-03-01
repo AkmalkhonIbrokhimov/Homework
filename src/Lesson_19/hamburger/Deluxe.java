@@ -17,7 +17,13 @@ public class Deluxe implements Hamburger{
         ingredientList.add(new Ingredient(IngredientsType.MAYONNAISE, 1));
     }
 
+    public int getCount() {
+        return count;
+    }
 
+    public List<Ingredient> getIngredientList() {
+        return ingredientList;
+    }
 
     @Override
     public String toString() {

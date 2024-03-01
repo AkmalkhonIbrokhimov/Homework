@@ -24,6 +24,14 @@ public class Healty implements Hamburger{
         return false;
     }
 
+    public int getCount() {
+        return count;
+    }
+
+    public List<Ingredient> getIngredientList() {
+        return ingredientList;
+    }
+
     @Override
     public String toString() {
         return "Healty{" +
